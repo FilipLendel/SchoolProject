@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatowanie</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    <header class="baner">
+        <h1>Formatowanie dokumentów HTML</h1>
+    </header>
+
+    <div id="panel1">
+        <h2>Przykład listy - hobby</h2>
+        <ul type="square">
+            <li>muzyka</li>
+            <li>turystyka</li>
+                <ol>
+                    <li>góry</li>
+                    <li>jeziora</li>
+                    <li>na rowerze</li>
+                </ol>
+            <li>książki</li>
+        </ul>
+    </div>
+    <div id="panel2">
+        <h2>Przykład tabeli - rozkład dnia</h2>
+        <table>
+            <th>Pora dnia</th> <th>obowiązki</th>
+            <tr>
+                <td>rano</td><td>nauka</td>
+            </tr>
+            <tr>
+                <td>południe</td><td>zajęcia dodatkowe</td>
+            </tr>
+            <tr>
+                <td>popołudnie</td><td rowspan="2">moje hobby</td>
+            </tr>
+            <tr>
+                <td>wieczór</td>
+            </tr>
+        </table>
+    </div>
+    <div id="panel3">
+        <img src="napisy.png" alt="technologia web">
+    </div>
+
+    <main>
+        <p>Podaj rozmiar tekstu w procentach: <input id="procent" type="number"> %</p>
+        <p><select name="wybor" id="select">
+            <option value="1" selected>prosty</option>
+            <option value="2">kursywa</option>
+        </select></p>
+        <p>Jakim kolorem sformatować tekst? Wybierz przycisk</p>
+        <button id="czerwony" onclick="red()"></button>
+        <button id="zielony" onclick="green()"></button>
+        <button id="niebieski" onclick="blue()"></button>
+        
+        <p id="zmiana">To jest przykład paragrafu, który może być dowolnie formatowany przez Jave Script</p>
+    </main>
+
+    <footer>
+        <p>Formatowaniem tekstu zajmował się: <i>000</i></p>
+        <a href="formatownie.pl" target="_blank">Odwiedź także</a>
+    </footer>
+
+<script>
+    
+
+    function red(){
+    const change = document.getElementById('zmiana');
+    change.style.color = "red";
+    const percent = document.getElementById('procent').value;
+    change.style.fontSize = `${percent}%`;
+    const fontChange = document.getElementById('select');
+    const choosen = fontChange.options[fontChange.selectedIndex].value;
+    console.log(choosen);
+    if(choosen==2){
+        change.style.fontStyle = "Italic";
+    }
+    else{
+        change.style.fontStyle = "normal";
+    }
+    }
+
+    function green(){
+    const change = document.getElementById('zmiana');
+    change.style.color = "green";
+    const percent = document.getElementById('procent').value;
+    change.style.fontSize = `${percent}%`;
+    const fontChange = document.getElementById('select');
+    const choosen = fontChange.options[fontChange.selectedIndex].value;
+    console.log(choosen);
+    if(choosen==2){
+        change.style.fontStyle = "Italic";
+    }
+    else{
+        change.style.fontStyle = "normal";
+    }
+    }
+
+    function blue(){
+    const change = document.getElementById('zmiana');
+    change.style.color = "blue";
+    const percent = document.getElementById('procent').value;
+    change.style.fontSize = `${percent}%`;
+    const fontChange = document.getElementById('select');
+    const choosen = fontChange.options[fontChange.selectedIndex].value;
+    console.log(choosen);
+    if(choosen==2){
+        change.style.fontStyle = "Italic";
+    }
+    else{
+        change.style.fontStyle = "normal";
+    }
+    }
+
+
+</script>
+</body>
+</html>
