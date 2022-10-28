@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    color: rgba(255, 255, 255, 0.839);
+    font-size: 25px;
+}
+
+main{
+    min-height: 100vh;
+    background: linear-gradient(to right top, #212826,#010b0d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glass{
+    background: rgb(255, 255, 255);
+    min-height: 80vh;
+    width: 70%;
+    background: linear-gradient(to right bottom, rgba(70, 65, 65, 0.7), rgba(255,255,255,0.1));
+    border-radius: 5px;
+    z-index: 2;
+    backdrop-filter: blur(20px);
+    display: flex;
+}
+.circle_one, .circle_two {
+    background: white;
+    background: linear-gradient(to right bottom, rgba(179, 48, 25, 0.9), rgba(186, 120, 5, 0.1));
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    border-radius: 50%; 
+}
+
+.circle_one{
+    top: 5%;
+    right: 5%;
+}
+.circle_two{
+    bottom: 5%;
+    left: 10%;
+}
+ .dashboard{
+    width: 40%;
+    height: 100%;
+    margin: 30px;
+ }
+
+ .circle_three, .circle_four{
+    background: white;
+    background: linear-gradient(to right bottom, rgb(79, 11, 214), rgba(186, 120, 5, 0.1));
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%; 
+ }
+ .circle_three{
+    top: 40%;
+    right: 20%;
+ }
+ .circle_four{
+    bottom: 35%;
+    left: 15%;
+ }
+
+ .circle_five, .circle_six{
+    background: white;
+    background: linear-gradient(to right bottom, rgb(11, 197, 214), rgba(186, 120, 5, 0.1));
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%; 
+ }
+
+ .circle_five{
+    top: 8%;
+    left: 32%;
+ }
+
+ .circle_six{
+    bottom: 3%;
+    left: 77%;
+ }
+
+
+ p{
+    color: #000000c8;
+    font-weight: 600;
+    padding-bottom: 10px;
+ }
+
+ h1,h2,h3,h4,h5 {
+  padding-bottom: 8px;  
+ }
+
+ .skills{
+    background: rgb(255, 255, 255);
+    min-height: 50%;
+    width: 100%;
+    background: linear-gradient(to right bottom, rgba(70, 65, 65, 0.7), rgba(255,255,255,0.1));
+    border-radius: 10px;
+    z-index: 2;
+    backdrop-filter: blur(20px);
+    display: flex;
+ }
+
+ 
+  .rating h2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 25px;
+}
+
+.rating{
+    height: 100%;
+    width: 100%;
+}
+
+.list {
+   margin-left: 50px;
+   margin-top: 20px;
+}
+
+.list li{
+   margin-top: 5px;
+}
