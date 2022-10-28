@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miernik jakości hasła</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    
+<header id="baner"><a href="index.html"><h1>Sprawdź swoje hasło</h1></a></header>
+
+<div id="lewy">
+    <h2>Wybierz</h2>
+    <ol>
+        <li><a href="haslo.html">Sprawdź swoje hasło</a></li>
+        <li><a href="zasady.html">Zasady tworzenia haseł</a></li>
+    </ol>
+</div>
+
+
+<div id="prawy"><h2>Jak silne jest twoje hasło?</h2>
+
+    <p>Twoje Hasło:</p>
+    <input id="try" type="password">
+    <button onclick="see()">Sprawdź</button>
+    <p id="info"></p>
+
+</div>
+
+
+<footer>
+    <h3>Miernik jakości hasła</h3>
+    <p>Stronę opracował: 000</p> 
+</footer>
+
+<script>
+function see(){
+const input = document.querySelector("#try");
+input.addEventListener("input", e => {
+    const val = input.value;
+    const reg = /^[a-zA-Z ]{7,}$/g;
+    const leng = val.lenght;
+
+    if(reg.test(val)& leng > 7){
+        document.getElementById("info").innerHTML = "Dobre!"
+    }
+    else if(reg.test(val)){
+        document.getElementById("info").innerHTML = "Średnie!"
+    }
+})
+}
+
+
+
+
+/*document.querySelector('button').addEventListener('click', checkPassword)
+
+function checkPassword(){
+    const pass = document.querySelector("#try").value
+    if(pass.lenght > 7){
+        document.getElementById("info").innerHTML = "Dobre!"
+    }
+}*/
+
+
+</script>
+
+
+</body>
+</html>

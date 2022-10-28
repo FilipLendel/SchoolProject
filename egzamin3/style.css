@@ -1,0 +1,15 @@
+#baner{
+    background-color: #1c59a7;
+    height: 80px;
+}
+#lewy, #srodkowy, #prawy{
+    height: 200px;
+    width: 33%;
+    background-color: #3A70B5;
+    float: left;
+}
+#prawy{
+    width: 34%;
+    color: #ff8011;
+    color: rgb(255, 128, 16);
+}
